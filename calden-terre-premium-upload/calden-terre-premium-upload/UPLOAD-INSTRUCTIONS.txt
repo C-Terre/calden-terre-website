@@ -1,0 +1,17 @@
+CALDEN TERRE PREMIUM WEBSITE — GITHUB UPLOAD
+
+IMPORTANT: Keep the app and components folders intact.
+
+Recommended method:
+1. Install and open GitHub Desktop.
+2. File > Add local repository.
+3. Select this unzipped calden-terre-premium-upload folder.
+4. If prompted, create a repository here.
+5. Set the remote repository to C-Terre/calden-terre-website.
+6. Commit all files, then Push origin.
+
+Cloudflare Pages settings:
+- Production branch: main
+- Framework preset: None
+- Build command: npm run build
+- Build output directory: out
