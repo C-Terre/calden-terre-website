@@ -17,3 +17,4 @@ npm run dev
 - Production branch: `main`
 
 This project uses `output: "export"` in `next.config.ts`, so it deploys as a fully static website.
+Deployment update
