@@ -29,7 +29,7 @@ export default function ResourceCapture({ compact = false }: { compact?: boolean
       <div className={compact ? "" : "resource-capture"}>
         {!compact && <h3>Check your inbox</h3>}
         <p style={{ color: "var(--body)", margin: 0 }}>
-          Thanks — we&apos;ll send the Implementation Gap Assessment to {email} shortly.
+          Thanks, we&apos;ll send the Implementation Gap Assessment to {email} shortly.
         </p>
       </div>
     );
@@ -48,7 +48,7 @@ export default function ResourceCapture({ compact = false }: { compact?: boolean
         {status === "sending" ? "Sending..." : "Download the Free Assessment"}
       </button>
       {status === "error" && (
-        <p className="form-error">Something went wrong — please try again, or email info@caldenterre.com directly.</p>
+        <p className="form-error">Something went wrong. Please try again, or email info@caldenterre.com directly.</p>
       )}
     </form>
   );
