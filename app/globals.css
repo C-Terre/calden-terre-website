@@ -34,9 +34,10 @@ button,input,textarea{font:inherit}
 @keyframes heroArtFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @keyframes heroArtSheen{0%,55%{left:-60%}85%,100%{left:130%}}
 @media(max-width:640px){.hero-art{display:none}}
-.eyebrow{text-transform:uppercase;letter-spacing:.04em;font-size:clamp(22px,2.6vw,30px);font-weight:700;color:var(--terracotta);line-height:1.2}
-h1,h2,h3{letter-spacing:-.03em;margin:0;font-weight:600}
+.eyebrow{letter-spacing:.01em;font-size:clamp(22px,2.6vw,30px);font-weight:700;color:var(--terracotta);line-height:1.2}
+h1,h2,h3{letter-spacing:-.03em;margin:0;font-weight:500}
 h1{font-size:clamp(24px,2.8vw,34px);line-height:1.15;max-width:900px}
+.hero h1{font-weight:700;font-size:clamp(38px,5vw,58px);line-height:1.1;max-width:760px}
 h2{font-size:clamp(22px,2.6vw,28px);line-height:1.2}
 h3{font-size:23px;line-height:1.18}
 .lead{font-size:20px;line-height:1.65;color:var(--body);max-width:760px}
