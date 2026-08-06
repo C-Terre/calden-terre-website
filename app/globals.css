@@ -26,11 +26,10 @@ button,input,textarea{font:inherit}
 .btn-secondary{border-color:var(--terracotta);color:var(--terracotta);background:white}.btn-secondary:hover{background:var(--cream-2);transform:translateY(-2px)}
 .hero{background:linear-gradient(180deg,var(--cream),#fff);padding:96px 0 78px;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.hero-art{position:relative;min-height:520px;border-radius:28px;background:linear-gradient(180deg,var(--cream),#fff);box-shadow:var(--shadow);padding:28px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-art-glow{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(166,118,60,.32),rgba(166,118,60,0) 70%);animation:heroArtGlowPulse 6s ease-in-out infinite}
-.hero-art-logo{position:relative;z-index:2;overflow:hidden;border-radius:14px;animation:heroArtFloat 7s ease-in-out infinite}
+.hero-art{position:relative;min-height:520px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-art-glow{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(166,118,60,.16),rgba(166,118,60,0) 70%);animation:heroArtGlowPulse 6s ease-in-out infinite}
+.hero-art-logo{position:relative;z-index:2;overflow:hidden;opacity:0.4;animation:heroArtFloat 7s ease-in-out infinite}
 .hero-art-sheen{position:absolute;top:0;left:-60%;width:55%;height:100%;background:linear-gradient(75deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.65) 50%,rgba(255,255,255,0) 100%);transform:skewX(-12deg);mix-blend-mode:overlay;animation:heroArtSheen 6s ease-in-out infinite;animation-delay:1.5s}
-.hero-art-shadow{position:absolute;bottom:78px;width:190px;height:26px;border-radius:50%;background:rgba(28,35,51,.16);filter:blur(7px)}
 @keyframes heroArtGlowPulse{0%,100%{opacity:0.85;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
 @keyframes heroArtFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @keyframes heroArtSheen{0%,55%{left:-60%}85%,100%{left:130%}}
@@ -51,12 +50,24 @@ h3{font-size:23px;line-height:1.18}
 .section{padding:92px 0}.section-soft{background:var(--cream)}
 .section-head{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:42px}.section-head p{max-width:650px;color:var(--body);line-height:1.7;margin:0}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 8px 26px rgba(28,35,51,.06);transition:.25s ease}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 8px 26px rgba(28,35,51,.06);transition:.25s ease}
+.card--media{padding:0;overflow:hidden}
+.card--media .work-card-media{height:170px}
+.card-media-body{padding:36px 22px 22px}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
 .card p{color:var(--body);line-height:1.65;margin-bottom:0}
 .icon-badge{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--cream-2);color:var(--terracotta);margin-bottom:20px}
 .framework{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}.step{padding:22px 18px;border:1px solid var(--line);border-radius:18px;background:white;text-align:center}.step-num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--terracotta);color:white;font-weight:600;margin:0 auto 12px}.step b{display:block;margin-bottom:7px}.step span{font-size:13px;color:var(--body);line-height:1.5}
-.page-hero{padding:84px 0 56px;background:var(--cream)}.page-hero p{max-width:800px}
-.work-list{display:grid;gap:24px}.work-card{display:block;padding:32px;border:1px solid var(--line);border-radius:24px;background:#fff}.work-card .tag{display:inline-block;color:var(--terracotta);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}.work-card ul{margin:14px 0 0;padding-left:20px;color:var(--body);line-height:1.75}
+.page-hero{position:relative;padding:84px 0 56px;background:var(--cream);overflow:hidden}
+.page-hero-glow{position:absolute;top:-120px;right:-80px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(166,118,60,.22),rgba(166,118,60,0) 70%)}
+.prose-divider{display:flex;align-items:center;gap:10px;margin:44px 0}
+.prose-divider-line{flex:1;height:1px;background:var(--line)}
+.prose-divider-dot{width:8px;height:8px;border-radius:50%;background:var(--terracotta);flex:none}.page-hero p{max-width:800px}
+.work-list{display:grid;gap:24px}.work-card{display:block;padding:32px;border:1px solid var(--line);border-radius:24px;background:#fff}
+.work-card--media{padding:0;overflow:hidden}
+.work-card-media{position:relative;height:220px}
+.work-card-media img{width:100%;height:100%;object-fit:cover;display:block}
+.work-card-badge{position:absolute;bottom:-22px;left:28px;width:46px;height:46px;border-radius:50%;background:var(--terracotta);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(28,35,51,.2)}
+.work-card-body{padding:44px 32px 32px}.work-card .tag{display:inline-block;color:var(--terracotta);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}.work-card ul{margin:14px 0 0;padding-left:20px;color:var(--body);line-height:1.75}
 .footer{background:#171717;color:#fff;padding:56px 0 30px}.footer-grid{display:grid;grid-template-columns:1.3fr .7fr .7fr;gap:40px}.footer p,.footer a{color:#d1d5db}.footer a:hover{color:#fff}.footer-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:36px;padding-top:22px;font-size:13px;color:#9ca3af;display:flex;justify-content:space-between;gap:20px}
 .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}.contact-form{display:grid;gap:16px}.field{display:grid;gap:8px}.field label{font-weight:700;font-size:14px}.field input,.field textarea{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:#fff;outline:none}.field input:focus,.field textarea:focus{border-color:var(--terracotta);box-shadow:0 0 0 3px rgba(166,118,60,.12)}
 .prose{max-width:860px}.prose p,.prose li{color:var(--body);line-height:1.75}.prose h2{margin:38px 0 16px;font-size:34px}

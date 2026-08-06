@@ -8,7 +8,6 @@ export default function HeroArt() {
         <Image src="/logo.png" alt="" width={300} height={419} priority />
         <div className="hero-art-sheen" />
       </div>
-      <div className="hero-art-shadow" />
     </div>
   );
 }
