@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import Reveal from "@/components/Reveal";
 import { Search, Compass, Rocket, TrendingUp, Settings, ShieldCheck } from "lucide-react";
+export const metadata: Metadata = { title: "Framework", description: "The Calden Terre Impact Framework: a six-stage approach for building practical systems, executing priorities, and measuring performance." };
 const stages=[
 [Search,"Discover","Assess the current state, understand organizational context, identify gaps, and establish the implementation baseline."],
 [Compass,"Strategize","Translate priorities into a practical roadmap with clear objectives, ownership, sequencing, and resource requirements."],

@@ -61,10 +61,14 @@ h3{font-size:23px;line-height:1.18}
 .page-hero-glow{position:absolute;top:-120px;right:-80px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(166,118,60,.22),rgba(166,118,60,0) 70%)}
 .prose-divider{display:flex;align-items:center;gap:10px;margin:44px 0}
 .prose-divider-line{flex:1;height:1px;background:var(--line)}
-.prose-divider-dot{width:8px;height:8px;border-radius:50%;background:var(--terracotta);flex:none}.page-hero p{max-width:800px}
+.prose-divider-dot{width:8px;height:8px;border-radius:50%;background:var(--terracotta);flex:none}
+.statement-band{background:var(--ink);padding:110px 0;text-align:center}
+.statement-band .eyebrow{display:flex;justify-content:center;color:#c9a876}
+.statement-band blockquote{margin:20px auto 0;max-width:820px;color:#fff;font-size:clamp(26px,3.2vw,40px);line-height:1.4;font-weight:600;letter-spacing:-.02em}
+@media(max-width:640px){.statement-band{padding:72px 0}}.page-hero p{max-width:800px}
 .work-list{display:grid;gap:24px}.work-card{display:block;padding:32px;border:1px solid var(--line);border-radius:24px;background:#fff}
 .work-card--media{padding:0;overflow:hidden}
-.work-card-media{position:relative;height:220px}
+.work-card-media{position:relative;height:180px}
 .work-card-media img{width:100%;height:100%;object-fit:cover;display:block}
 .work-card-badge{position:absolute;bottom:-22px;left:28px;width:46px;height:46px;border-radius:50%;background:var(--terracotta);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(28,35,51,.2)}
 .work-card-body{padding:44px 32px 32px}.work-card .tag{display:inline-block;color:var(--terracotta);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}.work-card ul{margin:14px 0 0;padding-left:20px;color:var(--body);line-height:1.75}

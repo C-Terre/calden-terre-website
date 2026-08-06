@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import Reveal from "@/components/Reveal";
 import { Target, ShieldCheck, BarChart3 } from "lucide-react";
+export const metadata: Metadata = { title: "Insights", description: "Perspectives on sustainability systems, reporting, governance, climate performance, and organizational execution." };
 const insights=[
 [Target,"Why Sustainability Strategies Stall During Implementation"],
 [ShieldCheck,"Building ESG Governance That Works in Practice"],

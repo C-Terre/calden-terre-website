@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import Collapsible from "@/components/Collapsible";
 import Reveal from "@/components/Reveal";
 import { Leaf, Building2, Target, BarChart3, Cog, ClipboardCheck } from "lucide-react";
+export const metadata: Metadata = { title: "Services", description: "Sustainability expertise combined with operational execution, reporting, systems design, and program management." };
 const services=[
 [Leaf,"Sustainability & ESG Strategy","Sustainability strategy, ESG readiness, materiality, governance integration, action planning, and framework alignment."],
 [Building2,"Climate Impact & Infrastructure Innovation","GHG measurement, climate resilience, infrastructure systems, environmental performance, and innovation planning."],
