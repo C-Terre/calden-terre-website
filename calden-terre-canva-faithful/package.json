@@ -1,8 +1,0 @@
-{
-  "name": "calden-terre-canva-faithful",
-  "version": "2.0.0",
-  "private": true,
-  "scripts": {
-    "build": "rm -rf out && cp -R public out"
-  }
-}
