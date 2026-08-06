@@ -27,12 +27,13 @@ button,input,textarea{font:inherit}
 .hero{background:linear-gradient(180deg,var(--cream),#fff);padding:96px 0 78px;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .hero-art{position:relative;min-height:520px;border-radius:28px;background:linear-gradient(180deg,var(--cream),#fff);box-shadow:var(--shadow);padding:28px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-art-glow{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(166,118,60,.32),rgba(166,118,60,0) 70%)}
-.hero-art-frame{position:absolute}
-.hero-art-frame path{stroke:var(--terracotta);stroke-width:1.5;stroke-linecap:round;opacity:0.6}
-.hero-art-logo{position:relative;z-index:2;animation:heroArtFloat 7s ease-in-out infinite}
+.hero-art-glow{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(166,118,60,.32),rgba(166,118,60,0) 70%);animation:heroArtGlowPulse 6s ease-in-out infinite}
+.hero-art-logo{position:relative;z-index:2;overflow:hidden;border-radius:14px;animation:heroArtFloat 7s ease-in-out infinite}
+.hero-art-sheen{position:absolute;top:0;left:-60%;width:55%;height:100%;background:linear-gradient(75deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.65) 50%,rgba(255,255,255,0) 100%);transform:skewX(-12deg);mix-blend-mode:overlay;animation:heroArtSheen 6s ease-in-out infinite;animation-delay:1.5s}
 .hero-art-shadow{position:absolute;bottom:78px;width:190px;height:26px;border-radius:50%;background:rgba(28,35,51,.16);filter:blur(7px)}
+@keyframes heroArtGlowPulse{0%,100%{opacity:0.85;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
 @keyframes heroArtFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes heroArtSheen{0%,55%{left:-60%}85%,100%{left:130%}}
 @media(max-width:640px){.hero-art{display:none}}
 .eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-weight:600;color:var(--terracotta)}
 h1,h2,h3{letter-spacing:-.03em;margin:0;font-weight:600}
