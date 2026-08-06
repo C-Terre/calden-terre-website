@@ -1,0 +1,11 @@
+UPLOAD THESE ITEMS TO THE ROOT OF THE GITHUB REPOSITORY:
+
+1. package.json
+2. README.md
+3. the entire public folder
+
+Then use Cloudflare Pages settings:
+Framework preset: None
+Build command: npm run build
+Build output directory: out
+Root directory: blank
