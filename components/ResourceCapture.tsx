@@ -1,56 +1,41 @@
 "use client";
-import { useState } from "react";
+import { useEffect } from "react";
+
+declare global {
+  interface Window {
+    ml?: (...args: unknown[]) => void;
+  }
+}
+
+const ML_ACCOUNT_ID = "2550034";
+const ML_FORM_ID = "JLh55U";
 
 export default function ResourceCapture({ compact = false }: { compact?: boolean }) {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setStatus("sending");
-    try {
-      const res = await fetch("https://formspree.io/f/xlgqkjey", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          email,
-          _subject: "Implementation Gap Assessment request",
-          message: `New request for the free Implementation Gap Assessment from ${email}`
-        })
-      });
-      setStatus(res.ok ? "sent" : "error");
-    } catch {
-      setStatus("error");
-    }
-  }
-
-  if (status === "sent") {
-    return (
-      <div className={compact ? "" : "resource-capture"}>
-        {!compact && <h3>Check your inbox</h3>}
-        <p style={{ color: "var(--body)", margin: 0 }}>
-          Thanks, we&apos;ll send the Implementation Gap Assessment to {email} shortly.
-        </p>
-      </div>
-    );
-  }
+  useEffect(() => {
+    // The homepage's root layout already loads MailerLite's universal script
+    // once, sitewide. But this component can also mount on its own after
+    // the initial page load (e.g. when navigating client-side to a page
+    // that renders it), and MailerLite's script only scans the DOM for
+    // ".ml-embedded" elements when it first runs. Re-injecting a fresh
+    // script tag here forces that scan to happen again, now that this
+    // component's embed div actually exists in the DOM, so the form
+    // reliably renders no matter how the page was reached.
+    const script = document.createElement("script");
+    script.src = "https://assets.mailerlite.com/js/universal.js";
+    script.async = true;
+    script.onload = () => {
+      window.ml?.("account", ML_ACCOUNT_ID);
+    };
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const form = (
-    <form onSubmit={handleSubmit} className="resource-form">
-      <input
-        type="email"
-        required
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <button type="submit" className="btn btn-primary" disabled={status === "sending"}>
-        {status === "sending" ? "Sending..." : "Download the Free Assessment"}
-      </button>
-      {status === "error" && (
-        <p className="form-error">Something went wrong. Please try again, or email info@caldenterre.com directly.</p>
-      )}
-    </form>
+    <div className="resource-form">
+      <div className="ml-embedded" data-form={ML_FORM_ID}></div>
+    </div>
   );
 
   if (compact) return form;
