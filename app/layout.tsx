@@ -10,7 +10,7 @@ import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: { default: "Calden Terre | Sustainability Implementation Consulting", template: "%s | Calden Terre" },
-  description: "Sustainability implementation consulting for established small and growing businesses. Practical systems, measurable action, and credible progress, with sponsored programs for CDFIs and business-support organizations.",
+  description: "Implementation-focused sustainability, climate, operational systems, reporting, and program management support for SMEs and Community Development Financial Institutions.",
   metadataBase: new URL("https://caldenterre.com"),
   icons: { icon: "/favicon.png" }
 };
