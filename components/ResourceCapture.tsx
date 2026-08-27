@@ -43,7 +43,7 @@ export default function ResourceCapture({ compact = false }: { compact?: boolean
   return (
     <div className="resource-capture">
       <h3>Get The Implementation Gap Assessment</h3>
-      <p>Enter your email and we&apos;ll send the full workbook straight to your inbox.</p>
+      <p>Enter your email and we will send the full workbook straight to your inbox.</p>
       {form}
     </div>
   );

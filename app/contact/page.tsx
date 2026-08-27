@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import Reveal from "@/components/Reveal";
 import { MessageSquare, Mail } from "lucide-react";
-export const metadata: Metadata = { title: "Contact", description: "Tell us about your organization, priorities, and implementation needs, and we'll use your message to understand the best next step." };
+export const metadata: Metadata = { title: "Contact", description: "Tell us about your organization, priorities, and implementation needs, and we will use your message to understand the best next step." };
 
 const organizationTypes=["Established Small Business","Growing Business","CDFI or Community Lender","Business-Support Organization","Nonprofit or Foundation","Other"];
 const supportAreas=["Sustainability Readiness Assessment","Sustainability Implementation Roadmap","Operational Systems and Process Improvement","Program or Project Implementation","KPI Development and Performance Measurement","Sustainability Data and Dashboards","Impact Measurement and Reporting","Responsible Sourcing and Supply-Chain Support","Climate and Resource Performance","Sustainability Communication","Cohort Training or Sponsored Business Program","Other"];
